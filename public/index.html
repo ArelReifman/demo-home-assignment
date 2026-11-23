@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contacts</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Contacts</h1>
+
+      <section class="toolbar">
+        <form id="search-form">
+          <label for="search-input">Search by name, email or company</label>
+          <div class="row">
+            <input id="search-input" type="search" placeholder="e.g. Dana or acme" />
+            <button type="submit">Search</button>
+            <button type="button" id="clear-button">Clear</button>
+          </div>
+        </form>
+        <button type="button" id="import-button" class="primary">Import contacts</button>
+      </section>
+
+      <section id="import-result" hidden>
+        <p id="import-summary"></p>
+        <table id="import-errors">
+          <thead>
+            <tr><th>Row</th><th>Reason</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <p id="status"></p>
+
+      <table id="contacts-table" hidden>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Company</th>
+            <th>Created at</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
